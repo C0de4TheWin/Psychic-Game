@@ -50,12 +50,10 @@
         var losses = 0;
 
 
-       var userGuess = event.key;
-
+        var userGuess = (event.key + letterChoices );
         var computerGuess = letterChoices[Math.floor(Math.random() * letterChoices.length)];
 
-         document.onkeypress = myFunction(event) {
-          }
+
 
 
         if (letterChoices.indexOf(userGuess) > -1) {
@@ -75,11 +73,28 @@
 
                 totalGuess = 9;
                 losses++;
-                guessChoices = []
+                guessChoices = [];
+            }
+            ///document.write(letterChoices + event)
+            document.onkeypress = function (event)
+        };
+
+///unknown syntex error
 
 
-            
-}
+///last unknown problem is getting the game to run.
+///key must be pressed for game to begin. I tried to get this done via the function on key press above
+
+
+
+
+
+
+
+
+///this assignment was really tough for me. I knew how to pseudo code and break things down to steps but didn't know how
+///to formulate the code. It look many Google searches. I wish I was able to better recall the code specifics...
+
 
 
 
