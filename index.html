@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <title> Welcome to the Psychic Game</title>
+
+
+</head>
+
+<body>
+    <div class="container">
+
+
+        <div class="page-header">
+            <h1> Welcome to the Psychic Game </h1>
+        </div>
+
+
+        <div id="game">
+
+            <p1>Guess what letter I'm thinking of!</p1>
+            <p>Wins:</p>
+            <p>Losses:</p>
+            <p>Guesses Left:</p>
+            <p>Your Guesses so far:</p>
+        </div>
+
+
+
+    </div>
+    <input type="text" onkeypress="myFunction()">
+    <script>
+
+        var letterChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",];
+
+
+
+        var guessLeft = [];
+
+        var totalGuess = 9;
+        var wins = 0;
+
+        var losses = 0;
+
+
+       var userGuess = event.key;
+
+        var computerGuess = letterChoices[Math.floor(Math.random() * letterChoices.length)];
+
+         document.onkeypress = myFunction(event) {
+          }
+
+
+        if (letterChoices.indexOf(userGuess) > -1) {
+
+            if (userGuess === computerGuess) {
+                wins++;
+                totalGuess = 9;
+                guessLeft = [];
+            }
+
+            if (userGuess != computerGuess) {
+                totalGuess--;
+                guessLeft.push(userGuess);
+            }
+
+            if (totalGuess === 0) {
+
+                totalGuess = 9;
+                losses++;
+                guessChoices = []
+
+
+            
+}
+
+
+
+
+    </script>
+
+</body>
+
+</html>
